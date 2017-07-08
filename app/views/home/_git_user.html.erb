@@ -1,1 +1,7 @@
-Sample User Info
+<b>Name:</b> <%= @git_user.user_name %> <br>
+<b>Profile Url:</b> <%= link_to @git_user.profile_url, :name => @git_user.profile_url %> <br>
+<b>Location:</b> <%= @git_user.location || "Location Not Mentioned" %> <br>
+<b>Repositories:</b><br>
+<% @repositories.each do |rep| %>
+	<%= link_to rep.repository_url, :name => rep.repository_url %> <br>
+<% end %>
