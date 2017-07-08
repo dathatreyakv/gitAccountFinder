@@ -1,0 +1,3 @@
+function searchGitAcc(accName) {
+	
+}

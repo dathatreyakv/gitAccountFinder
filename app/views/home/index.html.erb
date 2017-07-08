@@ -1,0 +1,9 @@
+<div class="container">
+    <%= form_tag('home/search') do %>
+        <%= text_field_tag :user_name, "", class: 'form-control' %>
+        <%= submit_tag("Search", :id=>"search", :class=>"btn btn-primary", :name=>"submit") %>
+    <% end %>
+    <% if @git_user.present? %>
+      <%= render 'git_user', user: @git_user %>
+    <% end %>
+</div>
