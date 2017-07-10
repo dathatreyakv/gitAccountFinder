@@ -1,53 +1,28 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.input-group {
-    position: relative;
-    display: table;
-    border-collapse: separate;
+.btn-search {
+	background: #05b9c8;
+	color: #fff;
 }
-.input-group .form-control:not(:first-child):not(:last-child), .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child) {
-    border-radius: 0;
+.btn-search:hover {
+	background: hsla(186, 70%, 52%, 0.71);
+	color: #fff;
 }
-.buscador-principal .form-control {
-    height: 52px;
+.marginTOP{
+	margin-top: 10px;
 }
-/*BUTTON COLORS OVERIDE
-.btn-primary {
-    color: #fff;
-    background: #0086a1;
-    background-image: -webkit-linear-gradient(top, #0086a1, #00738a);
-    background-image: -moz-linear-gradient(top, #0086a1, #00738a);
-    background-image: -ms-linear-gradient(top, #0086a1, #00738a);
-    background-image: -o-linear-gradient(top, #0086a1, #00738a);
-    background-image: linear-gradient(to bottom, #0086a1, #00738a);
-    border: 1px solid #0085a1;
-    border-radius: 3px;
-    -webkit-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -ms-transition: all 0.3s linear;
-    -kthtml-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-}*/
-.btn {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    border-radius: 0;
-    padding: 15px 25px;
+label{ color: #05b9c8; }
+
+.textAlign{ 
+	margin-top: 3px;
+	text-align: right;
 }
-@media only screen and (max-width: 768px) {
-    .buscador-principal {
-		display: block;
-	}
-	.buscador-principal button{
-		width: 100%;
-	}
-	.claim-container {
-		font-size: 20px;
-		display: none;
+.fa {
+opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+	.fa{margin: 20px;}
+	.btn-search{margin: 8px}
+	.textAlign{
+		text-align: center !important;
 	}
 }

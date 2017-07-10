@@ -1,7 +1,19 @@
-<b>Name:</b> <%= @git_user.user_name %> <br>
-<b>Profile Url:</b> <%= link_to @git_user.profile_url, :name => @git_user.profile_url %> <br>
-<b>Location:</b> <%= @git_user.location || "Location Not Mentioned" %> <br>
-<b>Repositories:</b><br>
-<% @repositories.each do |rep| %>
-	<%= link_to rep.repository_url, :name => rep.repository_url %> <br>
-<% end %>
+<div class="row marginTOP">
+    <div class="col-sm-12 col-md-3 col-lg-3 text-center">
+        <i class="fa fa-user-circle-o fa-5x"></i>
+    </div>
+            
+        
+	<div class="col-sm-12 col-md-9 col-lg-9" >
+		<label ><b>Name:</b></label> 
+		<p><%= @git_user.user_name %> </p>
+		<label><b>Profile Url:</b></label> 
+		<p><%= link_to @git_user.profile_url, @git_user.profile_url, :target => "_blank" %> </p>
+		<label><b>Location:</b></label> 
+		<p><%= @git_user.location || "Location Not Mentioned" %> </p>
+		<label><b>Repositories:</b></label><br>
+		<% @repositories.each do |rep| %>
+			<p><%= link_to rep.repository_url, rep.repository_url, :target => "_blank" %></p>
+		<% end %>
+	</div>
+</div>

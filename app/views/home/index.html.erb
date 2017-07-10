@@ -1,7 +1,14 @@
 <div class="container">
-    <%= form_tag('search') do %>
-        <%= text_field_tag :user_name, (@git_user.try(:user_name) || ""), class: 'form-control' %>
-        <%= submit_tag("Search", :id=>"search", :class=>"btn btn-primary", :name=>"submit") %>
+    <%= form_tag home_search_url do %>
+        <div class= "row marginTOP">
+            <label class="col-md-3 col-sm-12 textAlign" style="padding-left: 2px;">Enter any Github username </label>
+            <div class= "col-md-7 col-sm-12 text-center" style="padding-left: 2px; padding-right: 2px">
+                <%= text_field_tag :user_name, (@git_user.try(:user_name) || ""), class: 'form-control' %>
+            </div>
+            <div class= "col-md-2 col-sm-12 text-center" style="padding-left: 2px;">
+                <%= submit_tag("Search", :id=>"search", :class=>"btn btn-search", :name=>"submit") %>
+            </div>
+        </div>
     <% end %>
     <% if @git_user.present? %>
       <%= render 'git_user' %>
